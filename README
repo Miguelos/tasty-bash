@@ -1,4 +1,4 @@
-Structured bashrc to allow for much easier understanding and handling of what shell changes you have set up. It is hardly based on https://github.com/Knewton/bash_magic, with things removed, new directories, and stuff I use added.
+Structured bashrc to allow for much easier understanding and handling of what shell changes you have set up. It is hard based on https://github.com/Knewton/bash_magic, with things removed, new directories, and stuff I use added.
 
 
 DESIGN
