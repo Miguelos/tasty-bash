@@ -19,3 +19,9 @@ export HISTFILESIZE=2000
 
 # Create ~/.bash_eternal_history
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo $$ $USER "$(history 1)" >> $HOME/.bash_eternal_history'
+
+# disable history for current shell session
+function disableHistory {
+	export HISTFILE=/dev/null
+	echo "disabled history for this shell session"		
+}
