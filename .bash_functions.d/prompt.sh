@@ -66,14 +66,14 @@ function set_prompt {
 	if [ `id -u` = 0 ]
 	then
 		#root
-		echo -ne "${debian_chroot:+($debian_chroot)}$EMR\u@\h$NONE \$(highlight_exit_code) $R\w \$$NONE "
+		echo -ne "${debian_chroot:+($debian_chroot)}$R\u@\h$NONE \$(highlight_exit_code) $R\w \$$NONE "
 	else
-		fulldir="$EMB\w$NONE"
+		fulldir="$B\w$NONE"
 		cdup=`git rev-parse --show-cdup 2> /dev/null`
 		if [ $? == 0 ]
 		#if [ ! -z "$cdup" ]
 		then
-			color=$EMM
+			color=$M
 			git diff --quiet HEAD &>/dev/null 
 			if [ $? == 1 ]
 			then
@@ -87,19 +87,19 @@ function set_prompt {
 			space=''
 			if [ "x$(git stash list | head -n 1)" != "x" ]; then
 				space=' '
-				untracked="$EMY\$$NONE"
+				untracked="$Y\$$NONE"
 			fi
 			if [ "x$(git status | grep Untracked)" != "x" ]; then
 				space=' '
-				untracked="$untracked$EMR%$NONE"
+				untracked="$untracked$R%$NONE"
 			fi
-			fulldir="$EMB$retract$color$local $EMW\$(__git_branch)$space$untracked$NONE "
+			fulldir="$B$retract$color$local $W\$(__git_branch)$space$untracked$NONE "
 		else
 			pdir=`pwd`
 			retract=${pdir/$HOME/\~}
-			fulldir="$EMB$retract$NONE "
+			fulldir="$B$retract$NONE "
 		fi
-		echo -ne "${debian_chroot:+($debian_chroot)}$EMG\u@\h$NONE \[\$(highlight_exit_code)\] $fulldir$EMB\$$NONE "
+		echo -ne "${debian_chroot:+($debian_chroot)}$G\u@\h$NONE \[\$(highlight_exit_code)\] $fulldir$B\$$NONE "
 	fi
 }
 #export GIT_PS1_SHOWDIRTYSTATE=1
