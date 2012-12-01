@@ -19,7 +19,7 @@ The base .bashrc (or can be renamed .bash_profile for those of you that use .bas
 3) definition of the include_d function
 4) imports of the above directories.
 
-Inside each directory, only files with the .sh extension will be sourced. 
+Inside each directory, only files with the .sh extension will be sourced. Files stored as stubs or non used are .bkp.
 
 USAGE
 --------
