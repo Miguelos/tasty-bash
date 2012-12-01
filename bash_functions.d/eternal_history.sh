@@ -15,4 +15,3 @@ shopt -s histverify
 
 # Create ~/.bash_eternal_history
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo $$ $USER "$(history 1)" >> $HOME/.bash_eternal_history'
-

@@ -1,7 +1,11 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+
+# list of all directories in which Linux will look for commands, scripts and programs
 export PATH=$PATH:$HOME/bin
+
+
 
 function include_d {
 	dir=$1
@@ -15,3 +19,5 @@ function include_d {
 include_d bash_functions
 include_d bash_aliases
 include_d bash_completion
+include_d bash_settings
+

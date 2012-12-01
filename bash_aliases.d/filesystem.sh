@@ -8,3 +8,9 @@ alias cls='clear;ls'
 # To navigate to the different directories
 alias ..='cd ..'
 alias ...='cd ../..'
+
+# List folders by disk usage
+alias folders='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
+
+#progress bar on file copy. Useful evenlocal.
+alias cpProgress="rsync --progress -ravz"
