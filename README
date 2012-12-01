@@ -34,9 +34,9 @@ Until I get around to creating an install program, my suggestion is that you do 
 2) Create your .d directories
   `mkdir ~/.bash_aliases.d ~/.bash_completion.d ~/.bash_functions.d`
 
-3) Symlink any functionality you want from bash_magic into the appropriate directory
+3) Symlink any functionality you want from tasty-bash into the appropriate directory
   `cd ~/.bash_functions.d`
-  `ln -s <bash_magic project dir>/.bash_functions/eternal_history.sh`
+  `ln -s <tasty-bash project dir>/.bash_functions/eternal_history.sh`
   <repeat as needed>
 
 4) Go through your existing .bashrc/.bash_profile and pull coherent chunks of functionality out and stuff it into new files in the appropriate directory
