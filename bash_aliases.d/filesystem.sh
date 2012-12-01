@@ -12,5 +12,8 @@ alias ...='cd ../..'
 # List folders by disk usage
 alias folders='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
 
-#progress bar on file copy. Useful evenlocal.
+# Progress bar on file copy. Useful evenlocal.
 alias cpProgress="rsync --progress -ravz"
+
+# See currently mounted filesystems in nice layout
+alias seeFilesystems="mount | column -t"
