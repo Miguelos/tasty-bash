@@ -1,6 +1,7 @@
 # Git aliases
 
 alias ga='git add'
+alias gaall='git add -A'
 alias gp='git push'
 alias gl='git log'
 alias gs='git status'
