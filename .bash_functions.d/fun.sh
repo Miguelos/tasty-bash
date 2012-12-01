@@ -2,9 +2,9 @@
 function cyanide() { display "$(wget -q http://explosm.net/comics/random/ -O - | grep -Po 'http://www.explosm.net/db/files/Comics/*/[^"]+(png|jpg|jpeg)')"; }
 
 # pretend to be busy in office to enjoy a cup of coffee
-function grepcolor()
+function cafebreak()
 {
-cat /dev/urandom | hexdump -C | grep --color=auto "ca fe"
+while [ true ]; do head -n 100 /dev/urandom; sleep .1; done | hexdump -C | grep "ca fe""
 }
 
 # get Futurama quotations from slashdot.org servers

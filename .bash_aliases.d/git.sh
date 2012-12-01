@@ -1,7 +1,8 @@
 # Git aliases
 
 alias ga='git add'
-alias gaall='git add -A'
+alias gaa='git add -A'
+alias gau='git add -u'				#git remove files which have been deleted
 alias gp='git push'
 alias gl='git log'
 alias gs='git status'

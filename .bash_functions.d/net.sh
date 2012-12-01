@@ -41,6 +41,16 @@ echo "---------------------------------------------------"
 function portcheck() { for i in $@;do curl -s "deluge-torrent.org/test-port.php?port=$i" | sed '/^$/d;s/<br><br>/ /g';done; }
 
 
+# Watch network service activity 
+function netActivity() { lsof -i }
+
+
+
+# Sharing file through http 80 port
+function shareFile80() {
+	nc -v -l 80 < $1
+}
+
 # cleanly list available wireless networks (using iwlist)
 function wscan()
 {

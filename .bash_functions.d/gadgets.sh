@@ -57,7 +57,7 @@ EOF
 # Search commandlinefu.com from the command line
 # using the API
 # Usage: cmdfu hello world
-function cmdfu() { curl "http://www.commandlinefu.com/commands/matching/$@/$(echo -n $@ | openssl base64)/plaintext" --silent | sed "s/\(^#.*\)/\x1b[32m\1\x1b[0m/g" | less -R ; }
+function commandfu() { curl "http://www.commandlinefu.com/commands/matching/$@/$(echo -n $@ | openssl base64)/plaintext" --silent | sed "s/\(^#.*\)/\x1b[32m\1\x1b[0m/g" | less -R ; }
 
 # Festival - text-to-speech 
 # requires festival: sudo apt-get install festival
@@ -66,3 +66,8 @@ function fest() {
     echo $1 | festival --tts
 }
 
+
+# See ram memory
+function seeram() {
+    sudo strings /dev/mem
+}
