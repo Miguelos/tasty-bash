@@ -13,5 +13,9 @@ export HISTTIMEFORMAT="%s "
 shopt -s histappend
 shopt -s histverify
 
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+export HISTSIZE=1000
+export HISTFILESIZE=2000
+
 # Create ~/.bash_eternal_history
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo $$ $USER "$(history 1)" >> $HOME/.bash_eternal_history'
