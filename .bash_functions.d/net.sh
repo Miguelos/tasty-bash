@@ -42,7 +42,9 @@ function portcheck() { for i in $@;do curl -s "deluge-torrent.org/test-port.php?
 
 
 # Watch network service activity 
-function netActivity() { lsof -i }
+function netActivity() { 
+	watch lsof -i
+}
 
 
 
@@ -81,4 +83,6 @@ function downforme() {
 function expandurl() { curl -sIL $1 2>&1 | awk '/^Location/ {print $2}' | tail -n1; }
 
 # Create an easy to pronounce shortened URL from CLI
-function shortenurl() { curl -s "http://shoutkey.com/new?url=$1" | sed -n 's/\<h1\>/\&/p' | sed 's/<[^>]*>//g;/</N;//b' ;}
+function shortenurl() { 
+curl -s "http://shoutkey.com/new?url=$1" | sed -n 's/\<h1\>/\&/p' | sed 's/<[^>]*>//g;/</N;//b' ;
+}
