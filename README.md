@@ -48,4 +48,6 @@ Until I get around to creating an install program, my suggestion is that you do 
 
 
 
-##Thanks to https://github.com/devonjones for https://github.com/Knewton/bash_magic .
+##Thanks to 
+
+https://github.com/devonjones for https://github.com/Knewton/bash_magic .
