@@ -45,9 +45,3 @@ Until I get around to creating an install program, my suggestion is that you do 
 
 5. Live a happier life knowing that your old messy bashrc is now a heck of a lot easier to understand.
 
-
-
-
-##Thanks to 
-
-https://github.com/devonjones for https://github.com/Knewton/bash_magic .
