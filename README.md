@@ -28,22 +28,22 @@ Inside each directory, only files with the .sh extension will be sourced. Files 
 
 Until I get around to creating an install program, my suggestion is that you do the following to install this:
 
-* Copy the contents of bashrc and append it onto the end of your .bashrc or .bash_profile
+1. Copy the contents of bashrc and append it onto the end of your .bashrc or .bash_profile
   `cat bashrc >> ~/.bashrc`
   -or-
   `cat bashrc >> ~/.bash_profile
 
-* Create your .d directories
+2. Create your .d directories
   `mkdir ~/.bash_aliases.d ~/.bash_completion.d ~/.bash_functions.d`
 
-* Symlink any functionality you want from tasty-bash into the appropriate directory
+3. Symlink any functionality you want from tasty-bash into the appropriate directory
   `cd ~/.bash_functions.d`
   `ln -s <tasty-bash project dir>/.bash_functions/eternal_history.sh`
   <repeat as needed>
 
-* Go through your existing .bashrc/.bash_profile and pull coherent chunks of functionality out and stuff it into new files in the appropriate directory
+4. Go through your existing .bashrc/.bash_profile and pull coherent chunks of functionality out and stuff it into new files in the appropriate directory
 
-* Live a happier life knowing that your old messy bashrc is now a heck of a lot easier to understand.
+5. Live a happier life knowing that your old messy bashrc is now a heck of a lot easier to understand.
 
 
 
