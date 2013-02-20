@@ -15,4 +15,8 @@ alias starwars='telnet towel.blinkenlights.nl'
 
 # watch movies in ASCII (just direct to the video)
 # needs libcaca0
-alias termvideo='mplayer -vo caca'								
+alias termvideo='mplayer -vo caca'	
+
+
+#gives a fact each time is called
+alias fact="elinks -dump randomfunfacts.com | grep '^|' | tr -d \|"						

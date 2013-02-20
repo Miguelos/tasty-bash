@@ -5,7 +5,7 @@ Structured bashrc to allow for much easier understanding and handling of what sh
 ##DESIGN
 
 
-Instead of keeping my bashrc all in one file that becomes a giant mess, I've split the file out into a bunch of small shell scripts that the main bashrc automatically imports.  This results in the followingdirectory setup:
+Instead of keeping my bashrc all in one file that becomes a giant mess, I've split the file out into a bunch of small shell scripts that the main bashrc automatically imports.  This results in the following directory setup:
 
 ~/.bashrc
 ~/.bash_aliases.d/
