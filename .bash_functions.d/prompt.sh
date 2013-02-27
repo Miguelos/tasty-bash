@@ -1,4 +1,3 @@
-
 # for having the error codes in red:
 highlight() {
 	if [ -x /usr/bin/tput ]
@@ -39,7 +38,11 @@ if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
 fi
 
-PS1='\[\033[32m\]\u@\h\[\033[00m\] $(highlight_exit_code) \[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+# Subversion prompt https://github.com/regit/subversion-prompt
+SVNP_HUGE_REPO_EXCLUDE_PATH="nufw-svn$|/tags$|/branches$"
+. ~/.bash/subversion-prompt
+
+PS1='\[\033[32m\]\u@\h\[\033[00m\] $(highlight_exit_code) \[\033[34m\]\w\[\033[31m\]$(__svn_stat)$(__git_ps1)\[\033[00m\]\$ '
 
 
 
