@@ -40,7 +40,7 @@ fi
 
 # Subversion prompt https://github.com/regit/subversion-prompt
 SVNP_HUGE_REPO_EXCLUDE_PATH="nufw-svn$|/tags$|/branches$"
-. ~/subversion-prompt.sh
+. ~/.bash_functions.d/subversion-prompt.sh
 
 PS1='\[\033[32m\]\u@\h\[\033[00m\] $(highlight_exit_code) \[\033[34m\]\w\[\033[31m\]$(__svn_stat)$(__git_ps1)\[\033[00m\]\$ '
 
